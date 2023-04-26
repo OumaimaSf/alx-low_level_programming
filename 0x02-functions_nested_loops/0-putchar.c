@@ -13,6 +13,9 @@ int main(void)
 	_putchar('r');
 	_putchar('a');
 	_putchar('h');
+	_putchar('t');
+	_putchar('p');
+	_putchar('d');
 	_putchar('\n');
 
 	return (0);
