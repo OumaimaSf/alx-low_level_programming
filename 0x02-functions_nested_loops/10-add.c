@@ -25,5 +25,5 @@ int add(int a, int b)
 	digit = (sum % 10) + '0';
 	_putchar(digit);
 
-	return (sign * sum);
+	return (a + b);
 }
