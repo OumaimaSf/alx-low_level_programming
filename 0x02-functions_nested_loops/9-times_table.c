@@ -4,7 +4,7 @@
  * times_table - print the 9 times table, starting with 0
  */
 
-void times_tables(void)
+void times_table(void)
 {
 	int i, j, product;
 
