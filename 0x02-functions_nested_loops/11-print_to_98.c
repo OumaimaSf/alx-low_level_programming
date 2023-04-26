@@ -22,12 +22,15 @@ void print_to_98(int n)
 	}
 	else
 	{
-		for (i = n; i > 98; i--)
+		for (i = n; i > 97; i--)
 		{
 			_putchar(i / 10 + '0');
 			_putchar(i % 10 + '0');
-			_putchar(',');
-			_putchar(' ');
+			if (i != 98)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 		}
 	}
 
