@@ -7,7 +7,7 @@
  * Return: 1 if n is positive, 0 if it is zero, -1 if it is negative
  */
 
-int print_sign(int n);
+int print_sign(int n)
 {
 	if (n > 0)
 	{
