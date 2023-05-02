@@ -5,7 +5,7 @@
  * @a: Pointer to the first integer to swap
  * @b: Pointer to the second integer to swap
  *
- * Return: none
+ * This function swaps the values of two integers using pointers.
  */
 
 void swap_int(int *a, int *b)
