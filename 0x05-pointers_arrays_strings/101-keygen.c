@@ -1,5 +1,6 @@
-#include <stdlib.h>
+#include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 
 /**
  * main - Entry point for keygen program
@@ -8,21 +9,29 @@
  */
 int main (void)
 {
-	char password[100];
+	char password[84];
 	int i, sum, diff;
 
-	srand(time(0));
+	srand(time(NULL));
 
-	for (i = 0, sum = 0; sum < 2772 - 122; i++)
+	sum = 0;
+	i = 0;
+
+	while (sum < 2772 - 122)
 	{
-		password[i] = rand() % 94 + 33;
+		n = rand() % 62;
+		if (n < 10)
+			password[i] = n + 48;
+		else if (n < 36)
+			password[i] = n + 55;
+		else
+			password[i] = n + 61;
+		
 		sum += password[i];
+		i++;
 	}
 
-	diff = sum - 2772 + 122;
-	password[i - 1] -= diff;
-
-	password[i] = '\0';
+	password[i] = 2772 - sum - '\0';
 
 	printf("%s", password);
 
