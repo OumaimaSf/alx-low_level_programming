@@ -10,6 +10,7 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 * Scope of variables
 
 ### Tasks
+#### Mandatory
 * 0. 98 Battery st.
 * 1. Don't swap horses in crossing a stream
 * 2. This report, by its very length, defends itself against the risk of being read
@@ -20,3 +21,6 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 * 7. Winning is only half of it. Having fun is the other half
 * 8. Arrays are not pointers
 * 9. strcpy
+#### Advanced
+* 10. Great leaders are willing to sacrifice the numbers to save the people. Poor leaders sacrifice the people to save the numbers
+* 11. Don't hate the hacker, hate the code
