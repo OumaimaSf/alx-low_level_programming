@@ -6,7 +6,7 @@
  * Return: the int converted from the string
  */
 
-int _atoi(char *s);
+int _atoi(char *s)
 {
 	int sign = 1;
 	int num = 0;
