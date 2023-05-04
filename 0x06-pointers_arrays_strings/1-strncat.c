@@ -10,6 +10,8 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
+	int dest_len =0, i;
+
 	while (dest[dest_len] != '\0')
 		dest_len++;
 
