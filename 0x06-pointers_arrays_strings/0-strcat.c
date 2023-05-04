@@ -11,16 +11,17 @@ char *_strcat(char *dest, char *src)
 {
 	int dest_len = 0, i;
 
-	/* Get length of destination string */
 	while (dest[dest_len] != '\0')
+	{
 		dest_len++;
-	
-	/* Copy source string to destination */
-	for (i = 0; src[i] != '\0'; i++)
-		dest[dest_len + i] = src[i];
-
-	/* Add null byte to end of destination */
-	dest[dest_len + i] = '\0';
-
+	}
+	i = 0;
+	while(src[i] != '\0')
+	{
+		dest[dest_len] = src[i];
+		dest_len++;
+		i++;
+	}
+	dest[dest_len] = '\0';
 	return (dest);
 }
