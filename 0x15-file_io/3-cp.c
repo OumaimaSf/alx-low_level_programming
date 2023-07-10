@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
                 exit(97);
 	}
 
-	fr = open(argv[1], O_RONDLY);
+	fr = open(argv[1], O_RDWR);
 	ft = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	error_file(fr, ft, argv);
 
