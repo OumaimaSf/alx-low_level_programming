@@ -9,14 +9,13 @@
  */
 size_t list_len(const list_t *h)
 {
-    const list_t *crnt = h;
-    size_t cnt = 0;
+	const list_t *crnt = h;
+	size_t cnt = 0;
 
-    while (crnt != NULL)
-    {
-        cnt++;
-        crnt = crnt->next;
-    }
-
-    return (cnt);
+	while (crnt != NULL)
+	{
+		cnt++;
+		crnt = crnt->next;
+	}
+	return (cnt);
 }
