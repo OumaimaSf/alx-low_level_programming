@@ -8,7 +8,7 @@
  * error_file - checks if files can be opened.
  * @fr: file from
  * @ft: file to
- * @argc: arguments
+ * @argc: arguments vector.
  */
 void error_file(int fr, int ft, char *argv[])
 {
@@ -51,10 +51,10 @@ int main(int argc, char *argv[])
 	{
 		n_chars = read(fr, buffer, 1024);
 		if (n_chars == -1)
-			error_file(-1, 0, argv);
+			error_file(fr, -1, argv);
 		n = write(ft, buffer, n_chars);
 		if (n == -1)
-			error_file(-1, ft, argv);
+			error_file(fr, ft, argv);
 	}
 
 	err = close(fr);
