@@ -20,7 +20,7 @@ void error_file(int fr, int ft, char *argv[])
 	if (ft == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", argv[2]);
-                exit(99);
+		exit(99);
 	}
 }
 
@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "%s\n", "Usage: cp fr ft");
-                exit(97);
+		exit(97);
 	}
 
 	fr = open(argv[1], O_RDWR);
@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 		if (n_chars == -1)
 			error_file(-1, 0, argv);
 		n = write(ft, buffer, n_chars);
-		if(n == -1)
+		if (n == -1)
 			error_file(-1, ft, argv);
 	}
 
@@ -63,13 +63,12 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fr);
 		exit(100);
 	}
-
-        err = close(ft);
-        if (err == -1)
-        {
-                dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ft);
-                exit(100);
-        }
+	err = close(ft);
+	if (err == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ft);
+		exit(100);
+	}
 
 	return (0);
 }
